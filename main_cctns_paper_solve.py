@@ -144,8 +144,10 @@ pending_object=Penting()
 win_object=AllWin()
 sub_object=Subject()
 pr_obj=PrSolver()
+
 while True:
     print("enter while loop")
+    conn_object.driver().set_window_size(720, 720)
     try:
         if conn_object.driver().find_element(By.XPATH,"/html/body/div/div[2]/div/div/form/div[3]/div/div/div[1]/h2").text == 'लम्बित (अभ्यास)Excercise की सूची':
             sub_object.sub_click()
@@ -181,3 +183,4 @@ while True:
         print("open paper for solve")
         print("demo work")
         sub_object.home_page()
+    continue
